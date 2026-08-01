@@ -337,6 +337,31 @@ body{
 }
 .about__copy p{ color: var(--ink-soft); line-height: 1.7; margin-bottom: 1.1rem; font-size: 1.02rem; }
 
+.about__byline{ display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem; }
+.about__avatar{
+  width: 56px; height: 56px; border-radius: 50%;
+  object-fit: cover; border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--sage);
+}
+.about__eyebrow{ margin-bottom: 0; }
+
+.course-card{
+  margin-top: 2.4rem;
+  background: var(--sage);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.8rem;
+}
+.course-card__eyebrow{ font-family: var(--font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--pine-deep); opacity: .75; margin-bottom: .5rem; }
+.course-card__title{ font-family: var(--font-display); font-weight: 600; font-size: 1.14rem; color: var(--pine-deep); margin-bottom: .5rem; }
+.course-card__desc{ color: var(--ink-soft); font-size: .92rem; line-height: 1.55; margin-bottom: 1.1rem; }
+.course-card__links{ display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+.course-card__links a{
+  font-size: .86rem; font-weight: 700; color: var(--pine-deep);
+  border-bottom: 1px solid var(--honey); padding-bottom: 2px;
+  transition: color .2s var(--ease);
+}
+.course-card__links a:hover{ color: var(--honey-deep); }
+
 .cred-badges{ display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; }
 .cred-badges li{
   font-family: var(--font-mono);
