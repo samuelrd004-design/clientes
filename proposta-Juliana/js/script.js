@@ -1,6 +1,16 @@
 (function () {
   "use strict";
 
+  // Header shadow on scroll
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var applyScrollState = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    applyScrollState();
+    window.addEventListener("scroll", applyScrollState, { passive: true });
+  }
+
   // Mobile nav toggle
   var toggle = document.getElementById("nav-toggle");
   var nav = document.getElementById("main-nav");
