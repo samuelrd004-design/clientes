@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  // Flag JS as available so CSS can safely hide .reveal elements —
+  // if this file never runs (blocked/offline), content stays visible by default.
+  document.documentElement.classList.add("js");
+
   // Header shadow on scroll
   var header = document.querySelector(".site-header");
   if (header) {

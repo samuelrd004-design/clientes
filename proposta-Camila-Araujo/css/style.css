@@ -387,13 +387,14 @@ body{
 .section--dark .h2{ color: var(--linen); }
 .section--dark .section-head p{ color: rgba(246,244,238,0.72); }
 
-/* Reveal-on-scroll */
-.reveal{
+/* Reveal-on-scroll — only hidden once JS confirms it can reveal it again;
+   without the .js flag (script blocked/offline) content stays visible. */
+.js .reveal{
   opacity: 0;
   transform: translateY(28px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
 }
-.reveal.is-visible{ opacity: 1; transform: none; }
+.js .reveal.is-visible{ opacity: 1; transform: none; }
 
 /* ============================================================
    SOBRE
