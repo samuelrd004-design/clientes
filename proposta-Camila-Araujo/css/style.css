@@ -792,6 +792,47 @@ body{
 }
 
 /* ============================================================
+   INSTAGRAM
+   ============================================================ */
+.instagram-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.instagram-card{
+  background: var(--white);
+  border: 1px solid rgba(42,28,31,0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.instagram-card__icon{
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--moss-soft);
+  color: var(--moss-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.instagram-card__icon svg{ width: 21px; height: 21px; }
+.instagram-card h3{
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--wine-deep);
+  margin-bottom: 8px;
+}
+.instagram-card p{
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.instagram-cta{
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ============================================================
    CONTATO / FOOTER CTA
    ============================================================ */
 .cta-final{
@@ -873,6 +914,10 @@ body{
 .whatsapp-float:hover{ transform: scale(1.08); }
 .whatsapp-float svg{ width: 28px; height: 28px; }
 
+/* Sticky mobile CTA bar — replaces the floating button below 760px,
+   where a full-width tap target converts better than a small circle. */
+.mobile-cta-bar{ display: none; }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -886,6 +931,7 @@ body{
   .itinerary__hq{ grid-template-columns: 1fr; }
   .itinerary__grid{ grid-template-columns: repeat(2, 1fr); }
   .reviews-grid{ grid-template-columns: repeat(2, 1fr); }
+  .instagram-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px){
@@ -913,8 +959,23 @@ body{
   .itinerary__route-line{ display: none; }
   .reviews-grid{ grid-template-columns: 1fr; }
   .reviews-head{ flex-direction: column; align-items: flex-start; }
+  .instagram-grid{ grid-template-columns: 1fr; }
   .trust-strip__inner{ font-size: 0.66rem; }
   .footer-inner{ flex-direction: column; text-align: center; }
+
+  /* Mobile CTA bar takes over from the floating button */
+  body{ padding-bottom: 82px; }
+  .whatsapp-float{ display: none; }
+  .mobile-cta-bar{
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 200;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    background: var(--white);
+    border-top: 1px solid rgba(42,28,31,0.1);
+    box-shadow: 0 -14px 30px -18px rgba(42,28,31,0.35);
+  }
 }
 
 @media (max-width: 480px){
