@@ -405,6 +405,21 @@ body{
   gap: clamp(40px, 6vw, 84px);
   align-items: start;
 }
+.about__photo{
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 4px solid var(--white);
+  box-shadow: 0 18px 40px -18px rgba(42,28,31,0.45), 0 0 0 1px rgba(92,27,39,0.12);
+}
+.about__photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .about__lead{
   font-family: var(--font-display);
   font-size: 1.55rem;
