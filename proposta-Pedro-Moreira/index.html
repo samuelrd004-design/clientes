@@ -115,6 +115,7 @@
         <li><a href="#consulta">A consulta</a></li>
         <li><a href="#servicos">Especialidades</a></li>
         <li><a href="#planos">Planos</a></li>
+        <li><a href="#agendar">Agendar</a></li>
         <li><a href="#avaliacoes">Avaliações</a></li>
         <li><a href="#local">Local</a></li>
       </ul>
@@ -341,6 +342,78 @@
           <a class="ebook-card__cta" href="https://wa.me/message/NDPGJF53XRGQE1?text=Ol%C3%A1%2C%20Pedro!%20Quero%20o%20e-book%20sobre%20como%20escolher%20bons%20suplementos." target="_blank" rel="noopener">Pedir no WhatsApp</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO DIRETO -->
+  <section class="section" id="agendar">
+    <div class="wrap agendar__grid">
+      <div class="agendar__copy reveal">
+        <p class="eyebrow">Agendamento direto</p>
+        <h2>Marque sua consulta sem sair do site</h2>
+        <p class="section-head__lead">Preencha os dados abaixo e envie: sua solicitação chega pronta no WhatsApp do Pedro, com tudo o que ele precisa para confirmar o melhor horário.</p>
+        <ul class="agendar__trust">
+          <li><svg viewBox="0 0 24 24"><use href="#ic-check"></use></svg>Resposta direta pelo WhatsApp do Pedro</li>
+          <li><svg viewBox="0 0 24 24"><use href="#ic-check"></use></svg>Presencial em Recife ou por teleconsulta</li>
+          <li><svg viewBox="0 0 24 24"><use href="#ic-check"></use></svg>Nenhum dado é cobrado ou armazenado no site</li>
+        </ul>
+      </div>
+
+      <form class="booking-card reveal" id="bookingForm" novalidate>
+        <div class="booking-field">
+          <label for="bkNome">Nome</label>
+          <input type="text" id="bkNome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+        <div class="booking-field">
+          <label for="bkServico">Serviço de interesse</label>
+          <select id="bkServico" name="servico" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option>Sessão avulsa / primeira consulta</option>
+            <option>Plano de acompanhamento 90 dias</option>
+            <option>Plano de acompanhamento 180 dias</option>
+            <option>Nutrição Esportiva</option>
+            <option>Emagrecimento</option>
+            <option>Nutrição Clínica</option>
+            <option>Nutrição da Mulher</option>
+            <option>Comportamento Alimentar</option>
+            <option>Nutrição Funcional</option>
+          </select>
+        </div>
+        <div class="booking-row">
+          <div class="booking-field">
+            <label for="bkFormato">Formato</label>
+            <select id="bkFormato" name="formato" required>
+              <option value="Presencial">Presencial (Recife)</option>
+              <option value="Teleconsulta">Teleconsulta (online)</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label for="bkPeriodo">Período preferido</label>
+            <select id="bkPeriodo" name="periodo">
+              <option value="" disabled selected>Sem preferência</option>
+              <option>Manhã</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+            </select>
+          </div>
+        </div>
+        <div class="booking-row">
+          <div class="booking-field">
+            <label for="bkData">Data preferida</label>
+            <input type="date" id="bkData" name="data">
+          </div>
+          <div class="booking-field">
+            <label for="bkTelefone">Seu WhatsApp</label>
+            <input type="tel" id="bkTelefone" name="telefone" placeholder="(81) 90000-0000">
+          </div>
+        </div>
+        <p class="booking-error" id="bookingError" role="alert" hidden>Preencha nome e serviço para continuar.</p>
+        <button type="submit" class="btn btn--mango btn--block">
+          <svg class="btn__icon" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><use href="#ic-whatsapp"></use></svg>
+          Enviar agendamento pelo WhatsApp
+        </button>
+        <p class="booking-note">Ao enviar, o WhatsApp abre com sua solicitação pronta para o Pedro confirmar o horário.</p>
+      </form>
     </div>
   </section>
 
